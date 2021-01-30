@@ -1,4 +1,3 @@
-from config import PLAYER_BLACK, PLAYER_WHITE
 from board.piece.piece import Piece
 
 class Pawn(Piece):
@@ -8,9 +7,9 @@ class Pawn(Piece):
   def piece_letter(self):
     return 'p'
 
-  def attack_positions(self):
+  def attack_positions(self, x, y):
     moves = [
-      self._point.move(1, 1),
-      self._point.move(1, -1)
+      self.player().next_position(x, y, 1, 1),
+      self.player().next_position(x, y, -1, 1)
     ]
-    return moves
+    return [move for move in moves if move]
