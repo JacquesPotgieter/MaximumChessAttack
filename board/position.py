@@ -4,6 +4,9 @@ class Position:
     self._y = y
     self._piece = piece
 
+  def assign_piece(self, piece):
+    self._piece = piece
+
   def print(self):
       position_name = self._piece.name() if self._piece else '. '
       print(" {} ".format(position_name), end='')

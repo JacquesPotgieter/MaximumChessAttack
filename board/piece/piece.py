@@ -8,7 +8,7 @@ class Piece(object):
     raise NotImplementedError('Override this method')
 
   def name(self):
-    return "{}{}".format(self.piece_letter(), self._player.letter())
+    return "{}{}".format(self.piece_letter(), self._player.color())
 
   def piece_letter(self):
     raise NotImplementedError('Override this method')

@@ -5,7 +5,7 @@ class Pawn(Piece):
   def __init__(self, *args):
     Piece.__init__(self, *args)
 
-  def name(self):
+  def piece_letter(self):
     return 'p'
 
   def attack_positions(self):
