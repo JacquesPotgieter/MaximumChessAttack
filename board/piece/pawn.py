@@ -1,6 +1,5 @@
-from ..config import PLAYER_BLACK, PLAYER_WHITE
-from ..point import Point
-from piece.piece import Piece
+from config import PLAYER_BLACK, PLAYER_WHITE
+from board.piece.piece import Piece
 
 class Pawn(Piece):
   def __init__(self, *args):

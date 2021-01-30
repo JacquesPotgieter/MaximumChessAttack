@@ -1,8 +1,7 @@
 from config import BOARD_WIDTH, BOARD_HEIGHT
 
 class Piece(object):
-  def __init__(self, point, player):
-    self._point = point
+  def __init__(self, player):
     self._player = player
 
   def next_possible_positions(self):
