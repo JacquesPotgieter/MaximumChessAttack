@@ -3,10 +3,10 @@ from board.position import Position
 
 class Board:
     def __init__(self):
-      self._board = dict()
-      for x in range(BOARD_HEIGHT):
-          for y in range(BOARD_WIDTH):
-              self._board[self._position(x, y)] = Position(x, y, None)
+        self._board = dict()
+        for y in range(BOARD_WIDTH):
+            for x in range(BOARD_HEIGHT):
+                self._board[self._position(x, y)] = Position(x, y, None)
 
     def get(self, x, y):
         return self._board.get(self._position(x, y))
@@ -16,9 +16,9 @@ class Board:
 
     def print_board(self):
         self._print_line()
-        for x in range(BOARD_WIDTH):
+        for y in range(BOARD_HEIGHT):
             print('# ', end='')
-            for y in range(BOARD_HEIGHT):
+            for x in range(BOARD_WIDTH):
                 self.get(x, y).print()
             print(' #')
         self._print_line()
