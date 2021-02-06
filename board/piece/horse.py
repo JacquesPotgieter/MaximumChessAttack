@@ -5,7 +5,7 @@ class Horse(Piece):
     Piece.__init__(self, *args)
 
   def piece_letter(self):
-    return 'K'
+    return 'N'
 
   def attack_positions(self, x, y):
     moves = [
