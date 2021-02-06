@@ -1,5 +1,5 @@
 from board import Board
-from board.piece import Pawn, Horse, Bishop
+from board.piece import Pawn, Horse, Bishop, Rook
 from board.player import Player
 
 from config import PLAYER_WHITE, PLAYER_BLACK
@@ -13,6 +13,7 @@ pawn_white = Pawn(white)
 pawn_black = Pawn(black)
 horse_black = Horse(black)
 bishop_black = Bishop(black)
+rook_white = Rook(white)
 
 board.get(0, 0).assign_piece(pawn_white)
 board.get(1, 1).assign_piece(pawn_black)
@@ -28,5 +29,8 @@ board.get(7, 7).assign_piece(pawn_black)
 board.get(6, 7).assign_piece(pawn_white)
 
 board.get(4, 2).assign_piece(bishop_black)
+
+board.get(1, 0).assign_piece(rook_white)
+board.get(4, 3).assign_piece(rook_white)
 
 board.print_board()
